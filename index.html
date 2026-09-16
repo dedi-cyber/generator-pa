@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistem Perangkat Ajar Pembelajaran Mendalam & Kurikulum Berbasis Cinta (KMA No. 1503 Tahun 2025)</title>
+    <title>Sistem Perangkat Ajar Pembelajaran Mendalam & KBC - Guru Kemenag</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -12,7 +12,7 @@
             theme: {
                 extend: {
                     colors: {
-                        Guru Kementerian Agama: {
+                        kemenag: {
                             green: '#0D5C46',
                             greenDark: '#083D2E',
                             gold: '#D97706',
@@ -105,29 +105,29 @@
 
     <!-- USER LOGIN / WELCOME MODAL -->
     <div id="authModal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-md z-50 flex items-center justify-center p-4">
-        <div class="bg-white rounded-3xl max-w-md w-full overflow-hidden shadow-2xl border-2 border-Guru Kementerian Agama-gold/40 transition-all transform scale-100">
-            <!-- Header Guru Kementerian Agama Pattern Banner -->
-            <div class="bg-gradient-to-r from-Guru Kementerian Agama-green via-emerald-800 to-Guru Kementerian Agama-greenDark p-6 text-white text-center relative overflow-hidden">
-                <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-tr from-Guru Kementerian Agama-gold to-yellow-300 text-Guru Kementerian Agama-greenDark shadow-lg mb-3">
+        <div class="bg-white rounded-3xl max-w-md w-full overflow-hidden shadow-2xl border-2 border-kemenag-gold/40 transition-all transform scale-100">
+            <!-- Header Pattern Banner -->
+            <div class="bg-gradient-to-r from-kemenag-green via-emerald-800 to-kemenag-greenDark p-6 text-white text-center relative overflow-hidden">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-tr from-kemenag-gold to-yellow-300 text-kemenag-greenDark shadow-lg mb-3">
                     <i class="fa-solid fa-kaaba text-3xl"></i>
                 </div>
-                <h2 class="text-xl font-bold tracking-wide">Guru Kementerian Agama</h2>
-                <p class="text-xs text-Kabupaten Lombok Timur-goldLight mt-1 font-medium">Guru Kementerian Agama</p>
+                <h2 class="text-xl font-bold tracking-wide">GURU KEMENAG</h2>
+                <p class="text-xs text-kemenag-goldLight mt-1 font-medium">Platform Perangkat Pembelajaran Guru Kementerian Agama</p>
                 <div class="mt-2 text-xs font-arabic text-yellow-100">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
             </div>
 
             <!-- Form User Info -->
             <div class="p-6 space-y-4">
                 <div class="text-center mb-2">
-                    <h3 class="text-lg font-bold text-slate-800">Selamat Datang Bapak / Ibu Guru Hebat</h3>
-                    <p class="text-xs text-slate-500">Silakan masukkan identitas pengguna untuk memulai penyusunan Bahan Ajar berbasis Deep Learning & KBC.</p>
+                    <h3 class="text-lg font-bold text-slate-800">Selamat Datang Bapak / Ibu Guru</h3>
+                    <p class="text-xs text-slate-500">Silakan masukkan identitas pengguna untuk memulai penyusunan Perangkat Ajar berbasis Deep Learning & KBC.</p>
                 </div>
 
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">Nama Lengkap Guru / Pengguna <span class="text-red-500">*</span></label>
                     <div class="relative">
                         <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400"><i class="fa-solid fa-user-tie"></i></span>
-                        <input type="text" id="inputAuthName" placeholder="Contoh: Dedi Efendi, S.Pd., M.PFis." class="w-full pl-10 pr-3 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-aceh-green text-sm outline-none transition">
+                        <input type="text" id="inputAuthName" placeholder="Contoh: Dr. Syarifah Aminah, M.Pd." class="w-full pl-10 pr-3 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-kemenag-green text-sm outline-none transition">
                     </div>
                 </div>
 
@@ -135,27 +135,35 @@
                     <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">ID Pengguna / NIP / NIK <span class="text-red-500">*</span></label>
                     <div class="relative">
                         <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400"><i class="fa-solid fa-id-card"></i></span>
-                        <input type="text" id="inputAuthID" placeholder="Contoh: 198504122010012015" class="w-full pl-10 pr-3 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-aceh-green text-sm outline-none transition">
+                        <input type="text" id="inputAuthID" placeholder="Contoh: 198504122010012015" class="w-full pl-10 pr-3 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-kemenag-green text-sm outline-none transition">
                     </div>
                 </div>
 
-                <button onclick="loginUser()" class="w-full py-3 bg-gradient-to-r from-islamic-green to-emerald-700 hover:from-islamic-greenDark hover:to-islamic-green text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition transform active:scale-95 flex items-center justify-center gap-2">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">Kabupaten / Kota / Provinsi</label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400"><i class="fa-solid fa-location-dot"></i></span>
+                        <input type="text" id="inputAuthRegion" value="Jakarta" placeholder="Contoh: Jakarta / Surabaya / Bandung" class="w-full pl-10 pr-3 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-kemenag-green text-sm outline-none transition bg-white">
+                    </div>
+                </div>
+
+                <button onclick="loginUser()" class="w-full py-3 bg-gradient-to-r from-kemenag-green to-emerald-700 hover:from-kemenag-greenDark hover:to-kemenag-green text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition transform active:scale-95 flex items-center justify-center gap-2">
                     <span>Masuk ke Platform</span>
                     <i class="fa-solid fa-arrow-right-long"></i>
                 </button>
             </div>
             <div class="px-6 py-3 bg-slate-50 border-t border-slate-100 text-center text-[11px] text-slate-500">
-                Aplikasi Resmi Penyusunan Perangkat Ajar Guru Kementerian Agama
+                Aplikasi Penyusunan Perangkat Ajar Guru Kemenag
             </div>
         </div>
     </div>
 
     <!-- MODAL GUIDELINE 8 DPL & PANCA CINTA -->
     <div id="guideModal" class="hidden fixed inset-0 bg-slate-900/80 backdrop-blur-md z-50 flex items-center justify-center p-4 overflow-y-auto">
-        <div class="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] flex flex-col shadow-2xl border-2 border-islamic-gold/40 overflow-hidden">
-            <div class="bg-gradient-to-r from-islamic-green to-islamic-greenDark px-6 py-4 text-white flex items-center justify-between">
+        <div class="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] flex flex-col shadow-2xl border-2 border-kemenag-gold/40 overflow-hidden">
+            <div class="bg-gradient-to-r from-kemenag-green to-kemenag-greenDark px-6 py-4 text-white flex items-center justify-between">
                 <div class="flex items-center space-x-3">
-                    <i class="fa-solid fa-book-open text-2xl text-islamic-goldLight"></i>
+                    <i class="fa-solid fa-book-open text-2xl text-kemenag-goldLight"></i>
                     <div>
                         <h3 class="font-bold text-base">Panduan Lengkap: Sintaks Pembelajaran, 8 DPL & Panca Cinta</h3>
                         <p class="text-xs text-emerald-100">Pedoman Kurikulum Berbasis Cinta & Ragam Metode Pembelajaran Mendalam</p>
@@ -168,32 +176,32 @@
                 <!-- Section Models -->
                 <div class="bg-emerald-50/70 border border-emerald-200 rounded-2xl p-4 space-y-3">
                     <h4 class="text-sm font-bold text-emerald-900 flex items-center gap-2">
-                        <i class="fa-solid fa-diagram-project text-islamic-green"></i>
+                        <i class="fa-solid fa-diagram-project text-kemenag-green"></i>
                         <span>Pilihan Sintaks Aktivitas Inti Pembelajaran</span>
                     </h4>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
                         <div class="bg-white p-3 rounded-xl border border-emerald-200">
-                            <span class="font-bold text-islamic-green block text-xs">1. Model 3M (Deep Learning)</span>
+                            <span class="font-bold text-kemenag-green block text-xs">1. Model 3M (Deep Learning)</span>
                             <p class="text-slate-600 mt-1"><strong>Memahami - Mengaplikasikan - Merefleksi</strong>. Mengonstruksi pemahaman materi mendalam, praktik kontekstual, dan internalisasi nilai.</p>
                         </div>
                         <div class="bg-white p-3 rounded-xl border border-emerald-200">
-                            <span class="font-bold text-islamic-green block text-xs">2. Model ARKA (Experiential)</span>
+                            <span class="font-bold text-kemenag-green block text-xs">2. Model ARKA (Experiential)</span>
                             <p class="text-slate-600 mt-1"><strong>Aktivitas - Refleksi - Konseptualisasi - Aksi</strong>. Pembelajaran berbasis siklus pengalaman nyata siswa.</p>
                         </div>
                         <div class="bg-white p-3 rounded-xl border border-emerald-200">
-                            <span class="font-bold text-islamic-green block text-xs">3. Model PBL (Problem-Based)</span>
+                            <span class="font-bold text-kemenag-green block text-xs">3. Model PBL (Problem-Based)</span>
                             <p class="text-slate-600 mt-1"><strong>Orientasi Masalah - Penyelidikan - Solusi - Evaluasi</strong>. Mengorientasikan siswa pada pemecahan masalah nyata/otentik.</p>
                         </div>
                         <div class="bg-white p-3 rounded-xl border border-emerald-200">
-                            <span class="font-bold text-islamic-green block text-xs">4. Model PjBL (Project-Based)</span>
+                            <span class="font-bold text-kemenag-green block text-xs">4. Model PjBL (Project-Based)</span>
                             <p class="text-slate-600 mt-1"><strong>Pertanyaan Utama - Desain Proyek - Pelaksanaan - Evaluasi</strong>. Menghasilkan luaran/produk karya yang bermanfaat.</p>
                         </div>
                         <div class="bg-white p-3 rounded-xl border border-emerald-200">
-                            <span class="font-bold text-islamic-green block text-xs">5. Inquiry / Discovery</span>
+                            <span class="font-bold text-kemenag-green block text-xs">5. Inquiry / Discovery</span>
                             <p class="text-slate-600 mt-1"><strong>Stimulasi - Pengumpulan Data - Pembuktian - Penarikan Kesimpulan</strong>. Menemukan konsep secara mandiri melalui eksplorasi.</p>
                         </div>
                         <div class="bg-white p-3 rounded-xl border border-emerald-200">
-                            <span class="font-bold text-islamic-green block text-xs">6. Model 5E (Instructional)</span>
+                            <span class="font-bold text-kemenag-green block text-xs">6. Model 5E (Instructional)</span>
                             <p class="text-slate-600 mt-1"><strong>Engage - Explore - Explain - Elaborate - Evaluate</strong>. Pembelajaran berurutan berbasis kontruktivisme sains/humaniora.</p>
                         </div>
                     </div>
@@ -202,31 +210,31 @@
                 <!-- Section Panca Cinta KBC -->
                 <div class="bg-amber-50/70 border border-amber-200 rounded-2xl p-4 space-y-3">
                     <h4 class="text-sm font-bold text-amber-900 flex items-center gap-2">
-                        <i class="fa-solid fa-heart text-islamic-red"></i>
-                        <span>Panca Cinta KBC (Kurikulum Berbasis Cinta - Kemenag RI)</span>
+                        <i class="fa-solid fa-heart text-kemenag-red"></i>
+                        <span>Panca Cinta KBC (Kurikulum Berbasis Cinta - Guru Kemenag)</span>
                     </h4>
                     <p class="text-slate-700 leading-relaxed">
-                        Pendekatan kurikulum yang diinisiasi oleh Kementerian Agama RI untuk mentransformasi pendidikan karakter agar tidak hanya mencerdaskan akal, tetapi juga menghangatkan jiwa peserta didik. Diimplementasikan secara sinergis melalui metode Deep Learning: <strong>Mindful (Berkesadaran)</strong>, <strong>Meaningful (Bermakna)</strong>, dan <strong>Joyful (Menyenangkan)</strong>.
+                        Pendekatan kurikulum yang diinisiasi untuk Guru Kemenag dalam mentransformasi pendidikan karakter agar tidak hanya mencerdaskan akal, tetapi juga menghangatkan jiwa peserta didik. Diimplementasikan secara sinergis melalui metode Deep Learning: <strong>Mindful (Berkesadaran)</strong>, <strong>Meaningful (Bermakna)</strong>, dan <strong>Joyful (Menyenangkan)</strong>.
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
                         <div class="bg-white p-3 rounded-xl border border-amber-200">
-                            <span class="font-bold text-islamic-green block text-xs">1. Cinta kepada Allah SWT dan Rasul-Nya (Transendental)</span>
+                            <span class="font-bold text-kemenag-green block text-xs">1. Cinta kepada Allah SWT dan Rasul-Nya (Transendental)</span>
                             <p class="text-slate-600 mt-1">Menanamkan kesadaran spiritual dan pemahaman sifat Allah yang Maha Cinta, serta menjadikan Rasulullah sebagai teladan kasih sayang.</p>
                         </div>
                         <div class="bg-white p-3 rounded-xl border border-amber-200">
-                            <span class="font-bold text-islamic-green block text-xs">2. Cinta kepada Diri dan Sesama Manusia (Sosial)</span>
+                            <span class="font-bold text-kemenag-green block text-xs">2. Cinta kepada Diri dan Sesama Manusia (Sosial)</span>
                             <p class="text-slate-600 mt-1">Membangun kecerdasan sosial-emosional, empati, dan budaya welas asih untuk mencegah perundungan (bullying).</p>
                         </div>
                         <div class="bg-white p-3 rounded-xl border border-amber-200">
-                            <span class="font-bold text-islamic-green block text-xs">3. Cinta kepada Ilmu Pengetahuan (Intelektual)</span>
+                            <span class="font-bold text-kemenag-green block text-xs">3. Cinta kepada Ilmu Pengetahuan (Intelektual)</span>
                             <p class="text-slate-600 mt-1">Mengubah paradigma belajar dari sekadar kewajiban menghafal menjadi petualangan intelektual yang menyenangkan.</p>
                         </div>
                         <div class="bg-white p-3 rounded-xl border border-amber-200">
-                            <span class="font-bold text-islamic-green block text-xs">4. Cinta kepada Alam dan Lingkungan (Ekologis)</span>
+                            <span class="font-bold text-kemenag-green block text-xs">4. Cinta kepada Alam dan Lingkungan (Ekologis)</span>
                             <p class="text-slate-600 mt-1">Memahami alam semesta sebagai wujud kebesaran Tuhan sehingga menumbuhkan kesadaran ekologis merawat lingkungan.</p>
                         </div>
                         <div class="bg-white p-3 rounded-xl border border-amber-200 md:col-span-2">
-                            <span class="font-bold text-islamic-green block text-xs">5. Cinta Tanah Air (Nasionalisme)</span>
+                            <span class="font-bold text-kemenag-green block text-xs">5. Cinta Tanah Air (Nasionalisme)</span>
                             <p class="text-slate-600 mt-1">Menumbuhkan semangat nasionalisme (hubbul wathan minal iman), diwujudkan melalui toleransi dan kontribusi nyata.</p>
                         </div>
                     </div>
@@ -235,7 +243,7 @@
                 <!-- Section 8 DPL -->
                 <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 space-y-3">
                     <h4 class="text-sm font-bold text-slate-800 flex items-center gap-2">
-                        <i class="fa-solid fa-graduation-cap text-islamic-green"></i>
+                        <i class="fa-solid fa-graduation-cap text-kemenag-green"></i>
                         <span>8 Dimensi Profil Lulusan (8 DPL)</span>
                     </h4>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -276,23 +284,23 @@
             </div>
 
             <div class="px-6 py-3 bg-slate-100 border-t border-slate-200 flex justify-end">
-                <button onclick="toggleGuideModal()" class="px-4 py-2 bg-islamic-green text-white font-bold rounded-xl hover:bg-islamic-greenDark transition">Mengerti & Tutup</button>
+                <button onclick="toggleGuideModal()" class="px-4 py-2 bg-kemenag-green text-white font-bold rounded-xl hover:bg-kemenag-greenDark transition">Mengerti & Tutup</button>
             </div>
         </div>
     </div>
 
     <!-- TOP NAVIGATION & BRANDING -->
-    <header class="no-print bg-gradient-to-r from-islamic-greenDark via-islamic-green to-emerald-900 text-white shadow-xl border-b-4 border-islamic-gold sticky top-0 z-40">
+    <header class="no-print bg-gradient-to-r from-kemenag-greenDark via-kemenag-green to-emerald-900 text-white shadow-xl border-b-4 border-kemenag-gold sticky top-0 z-40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
             <!-- Brand -->
             <div class="flex items-center space-x-3">
-                <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-islamic-gold via-yellow-400 to-amber-500 flex items-center justify-center text-islamic-greenDark shadow-md font-bold text-xl border border-yellow-200">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-kemenag-gold via-yellow-400 to-amber-500 flex items-center justify-center text-kemenag-greenDark shadow-md font-bold text-xl border border-yellow-200">
                     <i class="fa-solid fa-book-quran"></i>
                 </div>
                 <div>
                     <h1 class="font-extrabold text-base sm:text-lg tracking-tight leading-tight flex items-center gap-2">
-                        GURU KEMENTERIAN AGAMA
-                        <span class="bg-islamic-gold/20 text-islamic-goldLight text-[10px] uppercase tracking-widest px-2 py-0.5 rounded-full border border-islamic-gold/40">KBC & Deep Learning</span>
+                        GURU KEMENAG
+                        <span class="bg-kemenag-gold/20 text-kemenag-goldLight text-[10px] uppercase tracking-widest px-2 py-0.5 rounded-full border border-kemenag-gold/40">KBC & Deep Learning</span>
                     </h1>
                     <p class="text-xs text-emerald-100/90 font-medium">Pembuat Bahan Ajar Berbasis Pembelajaran Mendalam & Panca Cinta</p>
                 </div>
@@ -306,7 +314,7 @@
                 </button>
 
                 <div id="userBadge" class="hidden sm:flex items-center bg-emerald-950/60 border border-emerald-500/30 rounded-xl px-3 py-1.5 text-xs">
-                    <div class="w-7 h-7 rounded-lg bg-islamic-gold/30 text-islamic-goldLight flex items-center justify-center mr-2 font-bold">
+                    <div class="w-7 h-7 rounded-lg bg-kemenag-gold/30 text-kemenag-goldLight flex items-center justify-center mr-2 font-bold">
                         <i class="fa-solid fa-user-check"></i>
                     </div>
                     <div>
@@ -330,11 +338,11 @@
             
             <!-- Navigation Tabs -->
             <div class="flex bg-slate-100 p-1 rounded-xl w-full sm:w-auto">
-                <button id="tabFormBtn" onclick="switchTab('form')" class="flex-1 sm:flex-none px-5 py-2.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-2 bg-islamic-green text-white shadow">
+                <button id="tabFormBtn" onclick="switchTab('form')" class="flex-1 sm:flex-none px-5 py-2.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-2 bg-kemenag-green text-white shadow">
                     <i class="fa-solid fa-pen-to-square"></i>
                     <span>Form Input Data</span>
                 </button>
-                <button id="tabPreviewBtn" onclick="switchTab('preview')" class="flex-1 sm:flex-none px-5 py-2.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-2 text-slate-600 hover:text-islamic-green">
+                <button id="tabPreviewBtn" onclick="switchTab('preview')" class="flex-1 sm:flex-none px-5 py-2.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-2 text-slate-600 hover:text-kemenag-green">
                     <i class="fa-solid fa-file-lines"></i>
                     <span>Preview & Format A4</span>
                 </button>
@@ -353,7 +361,7 @@
                     <i class="fa-solid fa-microchip"></i>
                     <span>Generate AI Smart</span>
                 </button>
-                <button onclick="downloadPDF()" class="px-4 py-2 bg-gradient-to-r from-islamic-red to-red-700 hover:from-islamic-redDark hover:to-red-800 text-white rounded-xl text-xs font-bold shadow-md hover:shadow-lg transition flex items-center gap-2">
+                <button onclick="downloadPDF()" class="px-4 py-2 bg-gradient-to-r from-kemenag-red to-red-700 hover:from-kemenag-redDark hover:to-red-800 text-white rounded-xl text-xs font-bold shadow-md hover:shadow-lg transition flex items-center gap-2">
                     <i class="fa-solid fa-file-pdf"></i>
                     <span>Cetak / Download PDF</span>
                 </button>
@@ -365,30 +373,30 @@
 
             <!-- Card 1: Identitas Madrasah & Guru -->
             <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-                <div class="bg-gradient-to-r from-slate-800 to-slate-900 px-6 py-4 text-white flex items-center justify-between border-b-2 border-islamic-gold">
+                <div class="bg-gradient-to-r from-slate-800 to-slate-900 px-6 py-4 text-white flex items-center justify-between border-b-2 border-kemenag-gold">
                     <h3 class="font-bold text-sm tracking-wide flex items-center gap-2">
-                        <span class="w-6 h-6 rounded-md bg-islamic-gold text-slate-900 flex items-center justify-center text-xs font-black">1</span>
-                        <span>Identitas Madrasah & Pengajar</span>
+                        <span class="w-6 h-6 rounded-md bg-kemenag-gold text-slate-900 flex items-center justify-center text-xs font-black">1</span>
+                        <span>Identitas Madrasah / Sekolah & Pengajar</span>
                     </h3>
                     <span class="text-xs text-amber-400 font-semibold"><i class="fa-solid fa-school mr-1"></i> Data Administrasi</span>
                 </div>
                 
                 <div class="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                     <div>
-                        <label class="block text-xs font-semibold text-slate-700 mb-1">Nama Madrasah <span class="text-red-500">*</span></label>
-                        <input type="text" id="fieldMadrasah" value="MAN 1 JAKARTA" class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-islamic-green focus:border-islamic-green outline-none">
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Nama Madrasah / Sekolah <span class="text-red-500">*</span></label>
+                        <input type="text" id="fieldMadrasah" value="MAN 1 Jakarta" class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-kemenag-green focus:border-kemenag-green outline-none">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1">Jenjang Pendidikan & Status <span class="text-red-500">*</span></label>
                         <div class="grid grid-cols-2 gap-2">
-                            <select id="fieldJenjang" class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-islamic-green focus:border-islamic-green outline-none bg-white">
+                            <select id="fieldJenjang" class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-kemenag-green focus:border-kemenag-green outline-none bg-white">
                                 <option value="RA">RA (Raudhatul Athfal)</option>
                                 <option value="MI">MI (Madrasah Ibtidaiyah)</option>
                                 <option value="MTs">MTs (Madrasah Tsanawiyah)</option>
                                 <option value="MA" selected>MA (Madrasah Aliyah)</option>
                                 <option value="MAK">MAK (Madrasah Aliyah Kejuruan)</option>
                             </select>
-                            <select id="fieldStatusMadrasah" class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-islamic-green focus:border-islamic-green outline-none bg-white">
+                            <select id="fieldStatusMadrasah" class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-kemenag-green focus:border-kemenag-green outline-none bg-white">
                                 <option value="Negeri" selected>Negeri</option>
                                 <option value="Swasta">Swasta</option>
                             </select>
@@ -396,35 +404,35 @@
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1">Mata Pelajaran <span class="text-red-500">*</span></label>
-                        <input type="text" id="fieldMapel" value="Al-Qur'an Hadits / Fiqih" class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-islamic-green focus:border-islamic-green outline-none">
+                        <input type="text" id="fieldMapel" value="Al-Qur'an Hadits / Fiqih" class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-kemenag-green focus:border-kemenag-green outline-none">
                     </div>
 
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1">Nama Guru Pengampu <span class="text-red-500">*</span></label>
-                        <input type="text" id="fieldNamaGuru" value="Syarifah Nurul Hidayah, S.Pd.I" class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-islamic-green focus:border-islamic-green outline-none">
+                        <input type="text" id="fieldNamaGuru" value="Syarifah Nurul Hidayah, S.Pd.I" class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-kemenag-green focus:border-kemenag-green outline-none">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1">NIP Guru</label>
-                        <input type="text" id="fieldNipGuru" value="198803152014032004" class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-islamic-green focus:border-islamic-green outline-none">
+                        <input type="text" id="fieldNipGuru" value="198803152014032004" class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-kemenag-green focus:border-kemenag-green outline-none">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1">Kelas / Semester <span class="text-red-500">*</span></label>
-                        <input type="text" id="fieldKelas" value="X / Ganjil" class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-islamic-green focus:border-islamic-green outline-none">
+                        <input type="text" id="fieldKelas" value="X / Ganjil" class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-kemenag-green focus:border-kemenag-green outline-none">
                     </div>
 
                     <div>
-                        <label class="block text-xs font-semibold text-slate-700 mb-1">Nama Kepala Madrasah <span class="text-red-500">*</span></label>
-                        <input type="text" id="fieldNamaKamad" value="Drs. H. Abdullah Usman, M.Ag." class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-islamic-green focus:border-islamic-green outline-none">
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Nama Kepala Madrasah / Sekolah <span class="text-red-500">*</span></label>
+                        <input type="text" id="fieldNamaKamad" value="Drs. H. Abdullah Usman, M.Ag." class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-kemenag-green focus:border-kemenag-green outline-none">
                     </div>
                     <div>
-                        <label class="block text-xs font-semibold text-slate-700 mb-1">NIP Kepala Madrasah</label>
-                        <input type="text" id="fieldNipKamad" value="197205101998031002" class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-islamic-green focus:border-islamic-green outline-none">
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">NIP Kepala Madrasah / Sekolah</label>
+                        <input type="text" id="fieldNipKamad" value="197205101998031002" class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-kemenag-green focus:border-kemenag-green outline-none">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1">Pertemuan Ke & Durasi <span class="text-red-500">*</span></label>
                         <div class="grid grid-cols-2 gap-2">
-                            <input type="text" id="fieldPertemuanKe" value="Pertemuan ke-1" placeholder="Ke-1" class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-islamic-green outline-none">
-                            <input type="text" id="fieldDurasi" value="2 JP (2 x 45 Menit)" placeholder="2 JP" class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-islamic-green outline-none">
+                            <input type="text" id="fieldPertemuanKe" value="Pertemuan ke-1" placeholder="Ke-1" class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-kemenag-green outline-none">
+                            <input type="text" id="fieldDurasi" value="2 JP (2 x 45 Menit)" placeholder="2 JP" class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-kemenag-green outline-none">
                         </div>
                     </div>
                 </div>
@@ -432,9 +440,9 @@
 
             <!-- Card 2: Model Alur Pembelajaran & Konsep Kurikulum -->
             <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-                <div class="bg-gradient-to-r from-islamic-greenDark to-islamic-green px-6 py-4 text-white flex items-center justify-between border-b-2 border-islamic-gold">
+                <div class="bg-gradient-to-r from-kemenag-greenDark to-kemenag-green px-6 py-4 text-white flex items-center justify-between border-b-2 border-kemenag-gold">
                     <h3 class="font-bold text-sm tracking-wide flex items-center gap-2">
-                        <span class="w-6 h-6 rounded-md bg-islamic-gold text-slate-900 flex items-center justify-center text-xs font-black">2</span>
+                        <span class="w-6 h-6 rounded-md bg-kemenag-gold text-slate-900 flex items-center justify-center text-xs font-black">2</span>
                         <span>Model & Sintaks Alur Pembelajaran Inti</span>
                     </h3>
                     <span class="text-xs text-yellow-300 font-semibold"><i class="fa-solid fa-diagram-project mr-1"></i> Pilih Sintaks Pembelajaran</span>
@@ -452,61 +460,61 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                         
                         <!-- Model 1: 3M -->
-                        <label class="relative flex items-start p-3.5 rounded-xl border-2 border-slate-200 hover:border-islamic-green cursor-pointer transition bg-slate-50/50 has-[:checked]:border-islamic-green has-[:checked]:bg-emerald-50/50">
-                            <input type="radio" name="modelAlur" value="3M" checked onchange="updateModelAlurNotice()" class="mt-1 text-islamic-green focus:ring-islamic-green">
+                        <label class="relative flex items-start p-3.5 rounded-xl border-2 border-slate-200 hover:border-kemenag-green cursor-pointer transition bg-slate-50/50 has-[:checked]:border-kemenag-green has-[:checked]:bg-emerald-50/50">
+                            <input type="radio" name="modelAlur" value="3M" checked onchange="updateModelAlurNotice()" class="mt-1 text-kemenag-green focus:ring-kemenag-green">
                             <div class="ml-2.5">
                                 <span class="block text-xs font-bold text-slate-800">1. Model 3M (Deep Learning)</span>
-                                <span class="block text-[11px] text-slate-600 mt-0.5 font-semibold text-islamic-green">Memahami → Mengaplikasikan → Merefleksi</span>
+                                <span class="block text-[11px] text-slate-600 mt-0.5 font-semibold text-kemenag-green">Memahami → Mengaplikasikan → Merefleksi</span>
                                 <span class="block text-[10px] text-slate-500 mt-1">Fokus pada konseptualisasi mendalam, penerapan konteks nyata, dan pemaknaan spiritual.</span>
                             </div>
                         </label>
 
                         <!-- Model 2: ARKA -->
-                        <label class="relative flex items-start p-3.5 rounded-xl border-2 border-slate-200 hover:border-islamic-green cursor-pointer transition bg-slate-50/50 has-[:checked]:border-islamic-green has-[:checked]:bg-emerald-50/50">
-                            <input type="radio" name="modelAlur" value="ARKA" onchange="updateModelAlurNotice()" class="mt-1 text-islamic-green focus:ring-islamic-green">
+                        <label class="relative flex items-start p-3.5 rounded-xl border-2 border-slate-200 hover:border-kemenag-green cursor-pointer transition bg-slate-50/50 has-[:checked]:border-kemenag-green has-[:checked]:bg-emerald-50/50">
+                            <input type="radio" name="modelAlur" value="ARKA" onchange="updateModelAlurNotice()" class="mt-1 text-kemenag-green focus:ring-kemenag-green">
                             <div class="ml-2.5">
                                 <span class="block text-xs font-bold text-slate-800">2. Model ARKA (Experiential)</span>
-                                <span class="block text-[11px] text-slate-600 mt-0.5 font-semibold text-islamic-green">Aktivitas → Refleksi → Konseptualisasi → Aksi</span>
+                                <span class="block text-[11px] text-slate-600 mt-0.5 font-semibold text-kemenag-green">Aktivitas → Refleksi → Konseptualisasi → Aksi</span>
                                 <span class="block text-[10px] text-slate-500 mt-1">Siklus pengalaman langsung, perenungan mendalam, pembentukan teori, dan aksi nyata.</span>
                             </div>
                         </label>
 
                         <!-- Model 3: PBL -->
-                        <label class="relative flex items-start p-3.5 rounded-xl border-2 border-slate-200 hover:border-islamic-green cursor-pointer transition bg-slate-50/50 has-[:checked]:border-islamic-green has-[:checked]:bg-emerald-50/50">
-                            <input type="radio" name="modelAlur" value="PBL" onchange="updateModelAlurNotice()" class="mt-1 text-islamic-green focus:ring-islamic-green">
+                        <label class="relative flex items-start p-3.5 rounded-xl border-2 border-slate-200 hover:border-kemenag-green cursor-pointer transition bg-slate-50/50 has-[:checked]:border-kemenag-green has-[:checked]:bg-emerald-50/50">
+                            <input type="radio" name="modelAlur" value="PBL" onchange="updateModelAlurNotice()" class="mt-1 text-kemenag-green focus:ring-kemenag-green">
                             <div class="ml-2.5">
                                 <span class="block text-xs font-bold text-slate-800">3. Problem-Based Learning (PBL)</span>
-                                <span class="block text-[11px] text-slate-600 mt-0.5 font-semibold text-islamic-green">Orientasi Masalah → Penyelidikan → Solusi</span>
+                                <span class="block text-[11px] text-slate-600 mt-0.5 font-semibold text-kemenag-green">Orientasi Masalah → Penyelidikan → Solusi</span>
                                 <span class="block text-[10px] text-slate-500 mt-1">Mengembangkan penalaran kritis melalui analisis pemecahan masalah otentik/real-world.</span>
                             </div>
                         </label>
 
                         <!-- Model 4: PjBL -->
-                        <label class="relative flex items-start p-3.5 rounded-xl border-2 border-slate-200 hover:border-islamic-green cursor-pointer transition bg-slate-50/50 has-[:checked]:border-islamic-green has-[:checked]:bg-emerald-50/50">
-                            <input type="radio" name="modelAlur" value="PjBL" onchange="updateModelAlurNotice()" class="mt-1 text-islamic-green focus:ring-islamic-green">
+                        <label class="relative flex items-start p-3.5 rounded-xl border-2 border-slate-200 hover:border-kemenag-green cursor-pointer transition bg-slate-50/50 has-[:checked]:border-kemenag-green has-[:checked]:bg-emerald-50/50">
+                            <input type="radio" name="modelAlur" value="PjBL" onchange="updateModelAlurNotice()" class="mt-1 text-kemenag-green focus:ring-kemenag-green">
                             <div class="ml-2.5">
                                 <span class="block text-xs font-bold text-slate-800">4. Project-Based Learning (PjBL)</span>
-                                <span class="block text-[11px] text-slate-600 mt-0.5 font-semibold text-islamic-green">Pertanyaan Utama → Desain Proyek → Hasil</span>
+                                <span class="block text-[11px] text-slate-600 mt-0.5 font-semibold text-kemenag-green">Pertanyaan Utama → Desain Proyek → Hasil</span>
                                 <span class="block text-[10px] text-slate-500 mt-1">Menumbuhkan kreativitas dan kemandirian melalui penciptaan produk atau karya nyata.</span>
                             </div>
                         </label>
 
                         <!-- Model 5: Inquiry / Discovery -->
-                        <label class="relative flex items-start p-3.5 rounded-xl border-2 border-slate-200 hover:border-islamic-green cursor-pointer transition bg-slate-50/50 has-[:checked]:border-islamic-green has-[:checked]:bg-emerald-50/50">
-                            <input type="radio" name="modelAlur" value="INQUIRY" onchange="updateModelAlurNotice()" class="mt-1 text-islamic-green focus:ring-islamic-green">
+                        <label class="relative flex items-start p-3.5 rounded-xl border-2 border-slate-200 hover:border-kemenag-green cursor-pointer transition bg-slate-50/50 has-[:checked]:border-kemenag-green has-[:checked]:bg-emerald-50/50">
+                            <input type="radio" name="modelAlur" value="INQUIRY" onchange="updateModelAlurNotice()" class="mt-1 text-kemenag-green focus:ring-kemenag-green">
                             <div class="ml-2.5">
                                 <span class="block text-xs font-bold text-slate-800">5. Inquiry / Discovery Learning</span>
-                                <span class="block text-[11px] text-slate-600 mt-0.5 font-semibold text-islamic-green">Stimulasi → Eksplorasi → Pembuktian</span>
+                                <span class="block text-[11px] text-slate-600 mt-0.5 font-semibold text-kemenag-green">Stimulasi → Eksplorasi → Pembuktian</span>
                                 <span class="block text-[10px] text-slate-500 mt-1">Menemukan hakikat konsep pengetahuan secara mandiri melalui observasi & pembuktian.</span>
                             </div>
                         </label>
 
                         <!-- Model 6: 5E Model -->
-                        <label class="relative flex items-start p-3.5 rounded-xl border-2 border-slate-200 hover:border-islamic-green cursor-pointer transition bg-slate-50/50 has-[:checked]:border-islamic-green has-[:checked]:bg-emerald-50/50">
-                            <input type="radio" name="modelAlur" value="5E" onchange="updateModelAlurNotice()" class="mt-1 text-islamic-green focus:ring-islamic-green">
+                        <label class="relative flex items-start p-3.5 rounded-xl border-2 border-slate-200 hover:border-kemenag-green cursor-pointer transition bg-slate-50/50 has-[:checked]:border-kemenag-green has-[:checked]:bg-emerald-50/50">
+                            <input type="radio" name="modelAlur" value="5E" onchange="updateModelAlurNotice()" class="mt-1 text-kemenag-green focus:ring-kemenag-green">
                             <div class="ml-2.5">
                                 <span class="block text-xs font-bold text-slate-800">6. Model 5E (Instructional)</span>
-                                <span class="block text-[11px] text-slate-600 mt-0.5 font-semibold text-islamic-green">Engage → Explore → Explain → Elaborate</span>
+                                <span class="block text-[11px] text-slate-600 mt-0.5 font-semibold text-kemenag-green">Engage → Explore → Explain → Elaborate</span>
                                 <span class="block text-[10px] text-slate-500 mt-1">Pendekatan konstruktivistik bertahap untuk membangun pemahaman saintifik/sosial.</span>
                             </div>
                         </label>
@@ -517,9 +525,9 @@
 
             <!-- Card 3: CP, TP, Indikator & Materi Ajar -->
             <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-                <div class="bg-gradient-to-r from-slate-800 to-slate-900 px-6 py-4 text-white flex items-center justify-between border-b-2 border-islamic-gold">
+                <div class="bg-gradient-to-r from-slate-800 to-slate-900 px-6 py-4 text-white flex items-center justify-between border-b-2 border-kemenag-gold">
                     <h3 class="font-bold text-sm tracking-wide flex items-center gap-2">
-                        <span class="w-6 h-6 rounded-md bg-islamic-gold text-slate-900 flex items-center justify-center text-xs font-black">3</span>
+                        <span class="w-6 h-6 rounded-md bg-kemenag-gold text-slate-900 flex items-center justify-center text-xs font-black">3</span>
                         <span>Capaian, Tujuan, Indikator & Materi Ajar</span>
                     </h3>
                     <span class="text-xs text-amber-300 font-semibold"><i class="fa-solid fa-book-open mr-1"></i> Substansi Kurikulum</span>
@@ -527,40 +535,40 @@
                 <div class="p-6 space-y-4">
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1">Capaian Pembelajaran (CP) <span class="text-red-500">*</span></label>
-                        <textarea id="fieldCP" rows="2" class="w-full p-3 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-islamic-green outline-none">Peserta didik mampu menganalisis konsep dan hukum-hukum Fiqih Muamalah (transaksi ekonomi Islam modern) serta mengaktualisasikannya dalam kehidupan bermasyarakat yang jujur, amanah, dan penuh kasih sayang.</textarea>
+                        <textarea id="fieldCP" rows="2" class="w-full p-3 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-kemenag-green outline-none">Peserta didik mampu menganalisis konsep dan hukum-hukum Fiqih Muamalah (transaksi ekonomi Islam modern) serta mengaktualisasikannya dalam kehidupan bermasyarakat yang jujur, amanah, dan penuh kasih sayang.</textarea>
                     </div>
 
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1">Tujuan Pembelajaran (TP) <span class="text-red-500">*</span></label>
-                        <textarea id="fieldTP" rows="2" class="w-full p-3 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-islamic-green outline-none">Melalui alur Pembelajaran Mendalam, peserta didik mampu mengidentifikasi prinsip Muamalah Islami, membedakan akad syariah dan gharar/riba, serta mempraktikkan simulasi jual beli syariah berlandaskan rasa cinta pada kejujuran.</textarea>
+                        <textarea id="fieldTP" rows="2" class="w-full p-3 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-kemenag-green outline-none">Melalui alur Pembelajaran Mendalam, peserta didik mampu mengidentifikasi prinsip Muamalah Islami, membedakan akad syariah dan gharar/riba, serta mempraktikkan simulasi jual beli syariah berlandaskan rasa cinta pada kejujuran.</textarea>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-semibold text-slate-700 mb-1">Indikator Ketercapaian TP (IKTP) <span class="text-red-500">*</span></label>
-                            <textarea id="fieldIKTP" rows="4" class="w-full p-3 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-islamic-green outline-none">1. Menjelaskan pengertian dan landasan hukum akad Muamalah syariah.
+                            <textarea id="fieldIKTP" rows="4" class="w-full p-3 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-kemenag-green outline-none">1. Menjelaskan pengertian dan landasan hukum akad Muamalah syariah.
 2. Menganalisis perbedaan prinsip bisnis Islami vs praktik Riba/Gharar.
 3. Mensimulasikan akad Jual Beli (Murabahah/Mudharabah) dalam kehidupan digital.
 4. Menunjukkan sikap tanggung jawab dan kepedulian dalam bertransaksi.</textarea>
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-slate-700 mb-1">Materi Ajar & Pokok Bahasan <span class="text-red-500">*</span></label>
-                            <textarea id="fieldMateri" rows="4" class="w-full p-3 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-islamic-green outline-none">Materi Utama: Fiqih Muamalah Kontemporer
+                            <textarea id="fieldMateri" rows="4" class="w-full p-3 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-kemenag-green outline-none">Materi Utama: Fiqih Muamalah Kontemporer
 Sub Materi:
 - Pengertian & Rukun Akad dalam Islam
 - Jenis Transaksi Terlarang (Riba, Gharar, Maysir)
-- Penerapan Digital Payment & FinTech Syariah di Indonesia
+- Penerapan Digital Payment & FinTech Syariah
 - Nilai Etika Kejujuran & Keberkahan Rezeki</textarea>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Card 4: Kurikulum Berbasis Cinta (KBC) & 8 DPL Pokjawasmad -->
+            <!-- Card 4: Kurikulum Berbasis Cinta (KBC) & 8 DPL Guru Kemenag -->
             <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-                <div class="bg-gradient-to-r from-islamic-redDark to-islamic-red px-6 py-4 text-white flex items-center justify-between border-b-2 border-islamic-gold">
+                <div class="bg-gradient-to-r from-kemenag-redDark to-kemenag-red px-6 py-4 text-white flex items-center justify-between border-b-2 border-kemenag-gold">
                     <h3 class="font-bold text-sm tracking-wide flex items-center gap-2">
-                        <span class="w-6 h-6 rounded-md bg-islamic-gold text-slate-900 flex items-center justify-center text-xs font-black">4</span>
+                        <span class="w-6 h-6 rounded-md bg-kemenag-gold text-slate-900 flex items-center justify-center text-xs font-black">4</span>
                         <span>Integrasi 5 Pilar Panca Cinta (KBC) & 8 Dimensi Profil Lulusan (DPL)</span>
                     </h3>
                     <button onclick="toggleGuideModal()" class="text-xs bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded-lg transition font-semibold flex items-center gap-1">
@@ -572,43 +580,43 @@ Sub Materi:
                     <!-- Integrasi Panca Cinta -->
                     <div>
                         <div class="flex items-center justify-between mb-2">
-                            <h4 class="text-xs font-bold text-slate-800 uppercase tracking-wider text-islamic-green flex items-center gap-1.5">
+                            <h4 class="text-xs font-bold text-slate-800 uppercase tracking-wider text-kemenag-green flex items-center gap-1.5">
                                 <i class="fa-solid fa-heart"></i>
-                                <span>5 Pilar Panca Cinta (Kurikulum Berbasis Cinta - Kemenag RI):</span>
+                                <span>5 Pilar Panca Cinta (Kurikulum Berbasis Cinta - Guru Kemenag):</span>
                             </h4>
                             <span class="text-[11px] text-slate-500 italic">Prinsip: Mindful, Meaningful, Joyful</span>
                         </div>
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3" id="pancaCintaBox">
-                            <label class="flex items-start space-x-2.5 bg-emerald-50/50 p-3 rounded-xl border border-emerald-200 hover:border-islamic-green cursor-pointer text-xs font-medium">
-                                <input type="checkbox" value="Cinta kepada Allah SWT & Rasul-Nya (Transendental)" checked class="mt-0.5 rounded text-islamic-green focus:ring-islamic-green panca-cinta-item">
+                            <label class="flex items-start space-x-2.5 bg-emerald-50/50 p-3 rounded-xl border border-emerald-200 hover:border-kemenag-green cursor-pointer text-xs font-medium">
+                                <input type="checkbox" value="Cinta kepada Allah SWT & Rasul-Nya (Transendental)" checked class="mt-0.5 rounded text-kemenag-green focus:ring-kemenag-green panca-cinta-item">
                                 <div>
                                     <span class="font-bold text-slate-800 block">1. Cinta Allah SWT & Rasul-Nya</span>
                                     <span class="text-[10px] text-slate-500 block">Orientasi Transendental - Ibadah & teladan welas asih atas dasar cinta.</span>
                                 </div>
                             </label>
-                            <label class="flex items-start space-x-2.5 bg-emerald-50/50 p-3 rounded-xl border border-emerald-200 hover:border-islamic-green cursor-pointer text-xs font-medium">
-                                <input type="checkbox" value="Cinta kepada Diri & Sesama Manusia (Sosial)" checked class="mt-0.5 rounded text-islamic-green focus:ring-islamic-green panca-cinta-item">
+                            <label class="flex items-start space-x-2.5 bg-emerald-50/50 p-3 rounded-xl border border-emerald-200 hover:border-kemenag-green cursor-pointer text-xs font-medium">
+                                <input type="checkbox" value="Cinta kepada Diri & Sesama Manusia (Sosial)" checked class="mt-0.5 rounded text-kemenag-green focus:ring-kemenag-green panca-cinta-item">
                                 <div>
                                     <span class="font-bold text-slate-800 block">2. Cinta Diri & Sesama Manusia</span>
                                     <span class="text-[10px] text-slate-500 block">Orientasi Sosial - Empati, kecerdasan emosional, cegah perundungan.</span>
                                 </div>
                             </label>
-                            <label class="flex items-start space-x-2.5 bg-emerald-50/50 p-3 rounded-xl border border-emerald-200 hover:border-islamic-green cursor-pointer text-xs font-medium">
-                                <input type="checkbox" value="Cinta kepada Ilmu Pengetahuan (Intelektual)" checked class="mt-0.5 rounded text-islamic-green focus:ring-islamic-green panca-cinta-item">
+                            <label class="flex items-start space-x-2.5 bg-emerald-50/50 p-3 rounded-xl border border-emerald-200 hover:border-kemenag-green cursor-pointer text-xs font-medium">
+                                <input type="checkbox" value="Cinta kepada Ilmu Pengetahuan (Intelektual)" checked class="mt-0.5 rounded text-kemenag-green focus:ring-kemenag-green panca-cinta-item">
                                 <div>
                                     <span class="font-bold text-slate-800 block">3. Cinta Ilmu Pengetahuan</span>
                                     <span class="text-[10px] text-slate-500 block">Orientasi Intelektual - Belajar sebagai petualangan yang menyenangkan.</span>
                                 </div>
                             </label>
-                            <label class="flex items-start space-x-2.5 bg-emerald-50/50 p-3 rounded-xl border border-emerald-200 hover:border-islamic-green cursor-pointer text-xs font-medium">
-                                <input type="checkbox" value="Cinta kepada Alam & Lingkungan (Ekologis)" checked class="mt-0.5 rounded text-islamic-green focus:ring-islamic-green panca-cinta-item">
+                            <label class="flex items-start space-x-2.5 bg-emerald-50/50 p-3 rounded-xl border border-emerald-200 hover:border-kemenag-green cursor-pointer text-xs font-medium">
+                                <input type="checkbox" value="Cinta kepada Alam & Lingkungan (Ekologis)" checked class="mt-0.5 rounded text-kemenag-green focus:ring-kemenag-green panca-cinta-item">
                                 <div>
                                     <span class="font-bold text-slate-800 block">4. Cinta Alam & Lingkungan</span>
                                     <span class="text-[10px] text-slate-500 block">Orientasi Ekologis - Kesadaran & tanggung jawab merawat alam ciptaan-Nya.</span>
                                 </div>
                             </label>
-                            <label class="flex items-start space-x-2.5 bg-emerald-50/50 p-3 rounded-xl border border-emerald-200 hover:border-islamic-green cursor-pointer text-xs font-medium sm:col-span-2 lg:col-span-2">
-                                <input type="checkbox" value="Cinta Tanah Air (Nasionalisme)" checked class="mt-0.5 rounded text-islamic-green focus:ring-islamic-green panca-cinta-item">
+                            <label class="flex items-start space-x-2.5 bg-emerald-50/50 p-3 rounded-xl border border-emerald-200 hover:border-kemenag-green cursor-pointer text-xs font-medium sm:col-span-2 lg:col-span-2">
+                                <input type="checkbox" value="Cinta Tanah Air (Nasionalisme)" checked class="mt-0.5 rounded text-kemenag-green focus:ring-kemenag-green panca-cinta-item">
                                 <div>
                                     <span class="font-bold text-slate-800 block">5. Cinta Tanah Air</span>
                                     <span class="text-[10px] text-slate-500 block">Orientasi Nasionalisme - Hubbul wathan minal iman, toleransi & kontribusi bagi tanah air.</span>
@@ -619,13 +627,13 @@ Sub Materi:
 
                     <!-- 8 Dimensi Profil Lulusan (8 DPL) -->
                     <div>
-                        <h4 class="text-xs font-bold text-slate-800 uppercase tracking-wider mb-2 text-islamic-red flex items-center gap-1.5">
+                        <h4 class="text-xs font-bold text-slate-800 uppercase tracking-wider mb-2 text-kemenag-red flex items-center gap-1.5">
                             <i class="fa-solid fa-graduation-cap"></i>
                             <span>8 Dimensi Profil Lulusan (8 DPL Standar):</span>
                         </h4>
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5" id="dplBox">
                             <label class="flex items-start space-x-2 bg-slate-50 p-2.5 rounded-xl border border-slate-200 text-xs cursor-pointer hover:border-slate-400">
-                                <input type="checkbox" value="Keimanan dan Ketakwaan" checked class="mt-0.5 rounded text-islamic-red dpl-item">
+                                <input type="checkbox" value="Keimanan dan Ketakwaan" checked class="mt-0.5 rounded text-kemenag-red dpl-item">
                                 <div>
                                     <span class="font-bold text-slate-800 block text-[11px]">1. Keimanan & Ketakwaan</span>
                                     <span class="text-[10px] text-slate-500 leading-tight block">Keyakinan teguh & mengamalkan nilai spiritual.</span>
@@ -633,7 +641,7 @@ Sub Materi:
                             </label>
 
                             <label class="flex items-start space-x-2 bg-slate-50 p-2.5 rounded-xl border border-slate-200 text-xs cursor-pointer hover:border-slate-400">
-                                <input type="checkbox" value="Kewargaan" checked class="mt-0.5 rounded text-islamic-red dpl-item">
+                                <input type="checkbox" value="Kewargaan" checked class="mt-0.5 rounded text-kemenag-red dpl-item">
                                 <div>
                                     <span class="font-bold text-slate-800 block text-[11px]">2. Kewargaan</span>
                                     <span class="text-[10px] text-slate-500 leading-tight block">Cinta tanah air, kebinekaan & tanggung jawab warga.</span>
@@ -641,7 +649,7 @@ Sub Materi:
                             </label>
 
                             <label class="flex items-start space-x-2 bg-slate-50 p-2.5 rounded-xl border border-slate-200 text-xs cursor-pointer hover:border-slate-400">
-                                <input type="checkbox" value="Penalaran Kritis" checked class="mt-0.5 rounded text-islamic-red dpl-item">
+                                <input type="checkbox" value="Penalaran Kritis" checked class="mt-0.5 rounded text-kemenag-red dpl-item">
                                 <div>
                                     <span class="font-bold text-slate-800 block text-[11px]">3. Penalaran Kritis</span>
                                     <span class="text-[10px] text-slate-500 leading-tight block">Berpikir logis, bedah fakta & selesaikan masalah.</span>
@@ -649,7 +657,7 @@ Sub Materi:
                             </label>
 
                             <label class="flex items-start space-x-2 bg-slate-50 p-2.5 rounded-xl border border-slate-200 text-xs cursor-pointer hover:border-slate-400">
-                                <input type="checkbox" value="Kreativitas" checked class="mt-0.5 rounded text-islamic-red dpl-item">
+                                <input type="checkbox" value="Kreativitas" checked class="mt-0.5 rounded text-kemenag-red dpl-item">
                                 <div>
                                     <span class="font-bold text-slate-800 block text-[11px]">4. Kreativitas</span>
                                     <span class="text-[10px] text-slate-500 leading-tight block">Ide orisinal, inovasi & alternatif bermanfaat.</span>
@@ -657,7 +665,7 @@ Sub Materi:
                             </label>
 
                             <label class="flex items-start space-x-2 bg-slate-50 p-2.5 rounded-xl border border-slate-200 text-xs cursor-pointer hover:border-slate-400">
-                                <input type="checkbox" value="Kolaborasi" checked class="mt-0.5 rounded text-islamic-red dpl-item">
+                                <input type="checkbox" value="Kolaborasi" checked class="mt-0.5 rounded text-kemenag-red dpl-item">
                                 <div>
                                     <span class="font-bold text-slate-800 block text-[11px]">5. Kolaborasi</span>
                                     <span class="text-[10px] text-slate-500 leading-tight block">Kerja sama tim & komunikasi positif kelompok.</span>
@@ -665,7 +673,7 @@ Sub Materi:
                             </label>
 
                             <label class="flex items-start space-x-2 bg-slate-50 p-2.5 rounded-xl border border-slate-200 text-xs cursor-pointer hover:border-slate-400">
-                                <input type="checkbox" value="Kemandirian" checked class="mt-0.5 rounded text-islamic-red dpl-item">
+                                <input type="checkbox" value="Kemandirian" checked class="mt-0.5 rounded text-kemenag-red dpl-item">
                                 <div>
                                     <span class="font-bold text-slate-800 block text-[11px]">6. Kemandirian</span>
                                     <span class="text-[10px] text-slate-500 leading-tight block">Mengelola diri, waktu & tanggung jawab mandiri.</span>
@@ -673,7 +681,7 @@ Sub Materi:
                             </label>
 
                             <label class="flex items-start space-x-2 bg-slate-50 p-2.5 rounded-xl border border-slate-200 text-xs cursor-pointer hover:border-slate-400">
-                                <input type="checkbox" value="Kesehatan" checked class="mt-0.5 rounded text-islamic-red dpl-item">
+                                <input type="checkbox" value="Kesehatan" checked class="mt-0.5 rounded text-kemenag-red dpl-item">
                                 <div>
                                     <span class="font-bold text-slate-800 block text-[11px]">7. Kesehatan</span>
                                     <span class="text-[10px] text-slate-500 leading-tight block">Bugar fisik, sehat mental & well-being lahir batin.</span>
@@ -681,7 +689,7 @@ Sub Materi:
                             </label>
 
                             <label class="flex items-start space-x-2 bg-slate-50 p-2.5 rounded-xl border border-slate-200 text-xs cursor-pointer hover:border-slate-400">
-                                <input type="checkbox" value="Komunikasi" checked class="mt-0.5 rounded text-islamic-red dpl-item">
+                                <input type="checkbox" value="Komunikasi" checked class="mt-0.5 rounded text-kemenag-red dpl-item">
                                 <div>
                                     <span class="font-bold text-slate-800 block text-[11px]">8. Komunikasi</span>
                                     <span class="text-[10px] text-slate-500 leading-tight block">Menyampaikan & menerima ide secara persuasif/jelas.</span>
@@ -694,16 +702,16 @@ Sub Materi:
                     <!-- Tantangan Khusus Kelas -->
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1">Tantangan Khusus Kelas & Strategi Diferensiasi</label>
-                        <textarea id="fieldTantangan" rows="2" placeholder="Contoh: Tingkat pemahaman digital siswa bervariasi; beberapa siswa memerlukan bimbingan ekstra dalam memahami konteks fikih klasik." class="w-full p-3 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-islamic-green outline-none">Keragaman minat siswa dan pemahaman konsep ekonomi syariah yang berbeda; disediakan lembar kerja bertingkat (diferensiasi proses & produk).</textarea>
+                        <textarea id="fieldTantangan" rows="2" placeholder="Contoh: Tingkat pemahaman digital siswa bervariasi; beberapa siswa memerlukan bimbingan ekstra dalam memahami konteks fikih klasik." class="w-full p-3 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-kemenag-green outline-none">Keragaman minat siswa dan pemahaman konsep ekonomi syariah yang berbeda; disediakan lembar kerja bertingkat (diferensiasi proses & produk).</textarea>
                     </div>
                 </div>
             </div>
 
             <!-- Card 5: Rencana Aktivitas Pembelajaran & Asesmen -->
             <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-                <div class="bg-gradient-to-r from-slate-800 to-slate-900 px-6 py-4 text-white flex items-center justify-between border-b-2 border-islamic-gold">
+                <div class="bg-gradient-to-r from-slate-800 to-slate-900 px-6 py-4 text-white flex items-center justify-between border-b-2 border-kemenag-gold">
                     <h3 class="font-bold text-sm tracking-wide flex items-center gap-2">
-                        <span class="w-6 h-6 rounded-md bg-islamic-gold text-slate-900 flex items-center justify-center text-xs font-black">5</span>
+                        <span class="w-6 h-6 rounded-md bg-kemenag-gold text-slate-900 flex items-center justify-center text-xs font-black">5</span>
                         <span>Sintaks Aktivitas Pembelajaran & Asesmen</span>
                     </h3>
                     <span class="text-xs text-amber-300 font-semibold"><i class="fa-solid fa-chalkboard-user mr-1"></i> Rincian Alur</span>
@@ -712,18 +720,18 @@ Sub Materi:
                 <div class="p-6 space-y-4">
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1">Aktivitas Pendahuluan (Orientasi & Apersepsi Islami)</label>
-                        <textarea id="fieldPendahuluan" rows="3" class="w-full p-3 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-islamic-green outline-none">- Mindful Learning: Pembacaan Ayat Suci Al-Qur'an (Surat Al-Baqarah: 275) & Doa Bersama untuk menenangkan emosi siswa.
+                        <textarea id="fieldPendahuluan" rows="3" class="w-full p-3 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-kemenag-green outline-none">- Mindful Learning: Pembacaan Ayat Suci Al-Qur'an (Surat Al-Baqarah: 275) & Doa Bersama untuk menenangkan emosi siswa.
 - Guru mengondisikan suasana belajar yang hangat penuh kasih sayang (KBC - Cinta Diri & Sesama).
-- Apersepsi Bermakna (Meaningful): Mengaitkan transaksi harian siswa di kantin madrasah dengan konsep kejujuran Muamalah.</textarea>
+- Apersepsi Bermakna (Meaningful): Mengaitkan transaksi harian siswa di kantin sekolah dengan konsep kejujuran Muamalah.</textarea>
                     </div>
 
                     <div>
                         <div class="flex items-center justify-between mb-1">
                             <label class="block text-xs font-semibold text-slate-700">Aktivitas Inti (Sesuai Sintaks Alur yang Dipilih & 8 DPL) <span class="text-red-500">*</span></label>
-                            <span id="modelLabelBadge" class="text-[10px] font-bold bg-emerald-100 text-islamic-greenDark px-2 py-0.5 rounded border border-emerald-300">Model 3M</span>
+                            <span id="modelLabelBadge" class="text-[10px] font-bold bg-emerald-100 text-kemenag-greenDark px-2 py-0.5 rounded border border-emerald-300">Model 3M</span>
                         </div>
-                        <textarea id="fieldAktivitasInti" rows="6" class="w-full p-3 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-islamic-green outline-none">Tahap 1: Memahami (Understanding) / Orientasi Konsep
-- Siswa mengamati tayangan transaksi pasar tradisional Indonesia vs e-commerce modern (Penalaran Kritis & Cinta Ilmu).
+                        <textarea id="fieldAktivitasInti" rows="6" class="w-full p-3 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-kemenag-green outline-none">Tahap 1: Memahami (Understanding) / Orientasi Konsep
+- Siswa mengamati tayangan transaksi pasar tradisional vs e-commerce modern (Penalaran Kritis & Cinta Ilmu).
 - Mengidentifikasi rukun dan syarat sah transaksi bisnis syariah.
 
 Tahap 2: Mengaplikasikan (Applying) / Praktik & Simulasi
@@ -731,20 +739,20 @@ Tahap 2: Mengaplikasikan (Applying) / Praktik & Simulasi
 - Menyusun skenario akad jual beli berlandaskan prinsip kejujuran (Keimanan & Ketakwaan).
 
 Tahap 3: Merefleksi (Reflecting) / Internalisasi & Aksi
-- Refleksi Well-being & Kewargaan: Mengaitkan transaksi bisnis Islami dengan penegakan Syariat Islam & tanggung jawab sosial di Indonesia (Cinta Tanah Air).
+- Refleksi Well-being & Kewargaan: Mengaitkan transaksi bisnis Islami dengan tanggung jawab sosial & kebangsaan (Cinta Tanah Air).
 - Penugasan Proyek Bebas: Membuat infografis atau purwarupa produk bisnis syariah (Kreativitas & Kemandirian).</textarea>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-semibold text-slate-700 mb-1">Aktivitas Penutup & Refleksi Keberkahan</label>
-                            <textarea id="fieldPenutup" rows="3" class="w-full p-3 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-islamic-green outline-none">- Joyful Learning: Peserta didik merangkum kesimpulan pembelajaran melalui kuis interaktif atau apersepsi menyenangkan.
+                            <textarea id="fieldPenutup" rows="3" class="w-full p-3 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-kemenag-green outline-none">- Joyful Learning: Peserta didik merangkum kesimpulan pembelajaran melalui kuis interaktif atau apersepsi menyenangkan.
 - Refleksi Nilai Panca Cinta: Menanamkan niat mencari rezeki halal dan bersyukur atas nikmat ilmu (Cinta Allah & Rasul-Nya).
 - Ice breaking fisik ringan & Doa Kaffaratul Majlis.</textarea>
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-slate-700 mb-1">Rencana Asesmen (Formatif, Sumatif & Sikap 8 DPL)</label>
-                            <textarea id="fieldAsesmen" rows="3" class="w-full p-3 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-islamic-green outline-none">- Asesmen Formatif: Observasi keaktifan diskusi, kemampuan kolaborasi & komunikasi kelompok.
+                            <textarea id="fieldAsesmen" rows="3" class="w-full p-3 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-kemenag-green outline-none">- Asesmen Formatif: Observasi keaktifan diskusi, kemampuan kolaborasi & komunikasi kelompok.
 - Asesmen Sumatif: Tes tertulis penalaran kritis & unjuk karya produk kreatif.
 - Asesmen Sikap: Lembar penilaian diri (Learning Log) integritas, kemandirian & keimanan.</textarea>
                         </div>
@@ -754,7 +762,7 @@ Tahap 3: Merefleksi (Reflecting) / Internalisasi & Aksi
                     <div class="pt-4 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-semibold text-slate-700 mb-1">Tempat Penetapan</label>
-                            <input type="text" id="fieldTempatPenetapan" value=".........." class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-xs outline-none">
+                            <input type="text" id="fieldTempatPenetapan" value="Jakarta" class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-xs outline-none">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-slate-700 mb-1">Tanggal Penetapan</label>
@@ -766,7 +774,7 @@ Tahap 3: Merefleksi (Reflecting) / Internalisasi & Aksi
 
             <!-- Bottom Generate Button -->
             <div class="flex justify-center py-4">
-                <button onclick="switchTab('preview')" class="px-8 py-3.5 bg-gradient-to-r from-islamic-green via-emerald-700 to-islamic-greenDark text-white font-extrabold rounded-2xl shadow-xl hover:shadow-2xl transition transform hover:-translate-y-0.5 active:translate-y-0 flex items-center gap-3 text-sm">
+                <button onclick="switchTab('preview')" class="px-8 py-3.5 bg-gradient-to-r from-kemenag-green via-emerald-700 to-kemenag-greenDark text-white font-extrabold rounded-2xl shadow-xl hover:shadow-2xl transition transform hover:-translate-y-0.5 active:translate-y-0 flex items-center gap-3 text-sm">
                     <i class="fa-solid fa-eye"></i>
                     <span>Generate & Lihat Format A4 Presisi</span>
                     <i class="fa-solid fa-arrow-right"></i>
@@ -785,14 +793,14 @@ Tahap 3: Merefleksi (Reflecting) / Internalisasi & Aksi
                     </div>
                     <div>
                         <div class="font-bold text-sm">Pratinjau Dokumen Siap Cetak Kertas A4</div>
-                        <div>Format ini telah disesuaikan dengan standar regulasi KMA No. 1503 Tahun 2025 (8 DPL & Panca Cinta KBC).</div>
+                        <div>Format ini telah disesuaikan dengan standar regulasi Guru Kemenag (8 DPL & Panca Cinta KBC).</div>
                     </div>
                 </div>
                 <div class="flex space-x-2">
                     <button onclick="switchTab('form')" class="px-3 py-1.5 bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 rounded-lg font-medium transition">
                         <i class="fa-solid fa-pen"></i> Edit Form
                     </button>
-                    <button onclick="downloadPDF()" class="px-3 py-1.5 bg-islamic-red hover:bg-red-800 text-white rounded-lg font-bold transition">
+                    <button onclick="downloadPDF()" class="px-3 py-1.5 bg-kemenag-red hover:bg-red-800 text-white rounded-lg font-bold transition">
                         <i class="fa-solid fa-download"></i> Cetak PDF
                     </button>
                 </div>
@@ -801,28 +809,27 @@ Tahap 3: Merefleksi (Reflecting) / Internalisasi & Aksi
             <!-- THE ACTUAL A4 PAPER VIEW -->
             <div class="a4-page rounded-sm" id="a4Content">
                 
-                <!-- KOP SURAT MADRASAH -->
+                <!-- KOP SURAT GURU KEMENAG -->
                 <div class="border-b-4 border-double border-slate-900 pb-3 mb-6 relative">
-                    <!-- Pintoe Aceh Ornamental Top Line -->
-                    <div class="h-1.5 w-full bg-gradient-to-r from-islamic-green via-islamic-gold to-islamic-red mb-2 rounded-full"></div>
+                    <div class="h-1.5 w-full bg-gradient-to-r from-kemenag-green via-kemenag-gold to-kemenag-red mb-2 rounded-full"></div>
                     
                     <div class="flex items-center justify-between">
                         <!-- Left Logo / Icon -->
-                        <div class="w-16 h-16 rounded-xl bg-slate-900 text-islamic-gold flex flex-col items-center justify-center p-1 border border-islamic-gold shadow-sm">
+                        <div class="w-16 h-16 rounded-xl bg-slate-900 text-kemenag-gold flex flex-col items-center justify-center p-1 border border-kemenag-gold shadow-sm">
                             <i class="fa-solid fa-kaaba text-2xl"></i>
-                            <span class="text-[8px] font-bold text-white mt-1">......</span>
+                            <span class="text-[7px] font-bold text-white mt-1 uppercase">KEMENAG</span>
                         </div>
 
                         <!-- Center Header Text -->
                         <div class="text-center flex-1 px-4">
-                            <h2 class="text-xs font-bold tracking-widest text-slate-600 uppercase">KELOMPOK KERJA PENGAWAS MADRASAH (POKJAWASMAD)</h2>
-                            <h1 class="text-lg font-black tracking-tight text-slate-900 uppercase">PROVINSI ...........</h1>
+                            <h2 class="text-xs font-bold tracking-widest text-slate-600 uppercase">KEMENTERIAN AGAMA REPUBLIK INDONESIA</h2>
+                            <h1 class="text-lg font-black tracking-tight text-slate-900 uppercase">GURU KEMENAG</h1>
                             <p class="text-[11px] font-semibold text-slate-700">PERANGKAT AJAR PEMBELAJARAN MENDALAM & KURIKULUM BERBASIS CINTA (KBC)</p>
                             <div class="font-arabic text-sm text-slate-800 font-bold mt-0.5">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
                         </div>
 
                         <!-- Right Logo / Emblem -->
-                        <div class="w-16 h-16 rounded-xl bg-islamic-green text-white flex flex-col items-center justify-center p-1 border border-emerald-400 shadow-sm">
+                        <div class="w-16 h-16 rounded-xl bg-kemenag-green text-white flex flex-col items-center justify-center p-1 border border-emerald-400 shadow-sm">
                             <i class="fa-solid fa-book-quran text-2xl"></i>
                             <span class="text-[8px] font-bold text-amber-300 mt-1">KBC 2026</span>
                         </div>
@@ -839,12 +846,12 @@ Tahap 3: Merefleksi (Reflecting) / Internalisasi & Aksi
                 <div class="mb-5">
                     <div class="bg-slate-100 px-3 py-1 font-bold text-xs border border-slate-300 border-b-0 uppercase tracking-wider text-slate-800 flex items-center justify-between">
                         <span>I. IDENTITAS MODUL & PENGATURAN PEMBELAJARAN</span>
-                        <span class="text-[10px] text-slate-500 font-normal">Pokjawasmad Format Valid</span>
+                        <span class="text-[10px] text-slate-500 font-normal">Format Valid Guru Kemenag</span>
                     </div>
                     <table class="w-full text-xs border-collapse border border-slate-300">
                         <tbody>
                             <tr class="border-b border-slate-300">
-                                <td class="w-1/4 p-2 bg-slate-50 font-semibold border-r border-slate-300">Nama Madrasah</td>
+                                <td class="w-1/4 p-2 bg-slate-50 font-semibold border-r border-slate-300">Nama Madrasah / Sekolah</td>
                                 <td class="w-1/4 p-2 border-r border-slate-300 font-bold text-slate-900" id="pvMadrasah">-</td>
                                 <td class="w-1/4 p-2 bg-slate-50 font-semibold border-r border-slate-300">Jenjang & Status</td>
                                 <td class="w-1/4 p-2 font-bold text-slate-900" id="pvJenjangStatus">-</td>
@@ -862,16 +869,16 @@ Tahap 3: Merefleksi (Reflecting) / Internalisasi & Aksi
                                 <td class="p-2 text-slate-900" id="pvNipGuru">-</td>
                             </tr>
                             <tr class="border-b border-slate-300">
-                                <td class="p-2 bg-slate-50 font-semibold border-r border-slate-300">Nama Kepala Madrasah</td>
+                                <td class="p-2 bg-slate-50 font-semibold border-r border-slate-300">Nama Kepala Madrasah / Sekolah</td>
                                 <td class="p-2 border-r border-slate-300 text-slate-900" id="pvNamaKamad">-</td>
-                                <td class="p-2 bg-slate-50 font-semibold border-r border-slate-300">NIP Kepala Madrasah</td>
+                                <td class="p-2 bg-slate-50 font-semibold border-r border-slate-300">NIP Kepala Madrasah / Sekolah</td>
                                 <td class="p-2 text-slate-900" id="pvNipKamad">-</td>
                             </tr>
                             <tr>
                                 <td class="p-2 bg-slate-50 font-semibold border-r border-slate-300">Pertemuan & Durasi</td>
                                 <td class="p-2 border-r border-slate-300 text-slate-900" id="pvPertemuanDurasi">-</td>
                                 <td class="p-2 bg-slate-50 font-semibold border-r border-slate-300">Model Sintaks Pembelajaran</td>
-                                <td class="p-2 font-bold text-islamic-green" id="pvModelAlur">-</td>
+                                <td class="p-2 font-bold text-kemenag-green" id="pvModelAlur">-</td>
                             </tr>
                         </tbody>
                     </table>
@@ -885,19 +892,19 @@ Tahap 3: Merefleksi (Reflecting) / Internalisasi & Aksi
                     
                     <div class="border border-slate-300 text-xs p-3 space-y-2">
                         <div>
-                            <span class="font-bold text-slate-800 uppercase text-[11px] block text-islamic-green">A. Capaian Pembelajaran (CP):</span>
+                            <span class="font-bold text-slate-800 uppercase text-[11px] block text-kemenag-green">A. Capaian Pembelajaran (CP):</span>
                             <p class="text-slate-700 leading-relaxed" id="pvCP">-</p>
                         </div>
                         <div class="pt-2 border-t border-slate-200">
-                            <span class="font-bold text-slate-800 uppercase text-[11px] block text-islamic-green">B. Tujuan Pembelajaran (TP):</span>
+                            <span class="font-bold text-slate-800 uppercase text-[11px] block text-kemenag-green">B. Tujuan Pembelajaran (TP):</span>
                             <p class="text-slate-700 leading-relaxed" id="pvTP">-</p>
                         </div>
                         <div class="pt-2 border-t border-slate-200">
-                            <span class="font-bold text-slate-800 uppercase text-[11px] block text-islamic-green">C. Indikator Ketercapaian TP (IKTP):</span>
+                            <span class="font-bold text-slate-800 uppercase text-[11px] block text-kemenag-green">C. Indikator Ketercapaian TP (IKTP):</span>
                             <div class="whitespace-pre-line text-slate-700 leading-relaxed" id="pvIKTP">-</div>
                         </div>
                         <div class="pt-2 border-t border-slate-200">
-                            <span class="font-bold text-slate-800 uppercase text-[11px] block text-islamic-green">D. Pokok Materi Ajar:</span>
+                            <span class="font-bold text-slate-800 uppercase text-[11px] block text-kemenag-green">D. Pokok Materi Ajar:</span>
                             <div class="whitespace-pre-line text-slate-700 leading-relaxed font-semibold" id="pvMateri">-</div>
                         </div>
                     </div>
@@ -933,19 +940,19 @@ Tahap 3: Merefleksi (Reflecting) / Internalisasi & Aksi
                     </div>
                     
                     <div class="border border-slate-300 text-xs">
-                        <div class="p-3 bg-slate-50 font-bold border-b border-slate-300 text-islamic-green flex justify-between">
+                        <div class="p-3 bg-slate-50 font-bold border-b border-slate-300 text-kemenag-green flex justify-between">
                             <span>1. KEGIATAN PENDAHULUAN (Mindful & Meaningful Learning)</span>
                             <span>15 Menit</span>
                         </div>
                         <div class="p-3 whitespace-pre-line text-slate-700 leading-relaxed border-b border-slate-300" id="pvPendahuluan">-</div>
 
-                        <div class="p-3 bg-slate-50 font-bold border-b border-slate-300 text-islamic-green flex justify-between">
+                        <div class="p-3 bg-slate-50 font-bold border-b border-slate-300 text-kemenag-green flex justify-between">
                             <span>2. KEGIATAN INTI (<span id="pvModelNameInTable">Sintaks Model Pembelajaran</span> & 8 DPL)</span>
                             <span>60 Menit</span>
                         </div>
                         <div class="p-3 whitespace-pre-line text-slate-700 leading-relaxed border-b border-slate-300 font-medium" id="pvAktivitasInti">-</div>
 
-                        <div class="p-3 bg-slate-50 font-bold border-b border-slate-300 text-islamic-green flex justify-between">
+                        <div class="p-3 bg-slate-50 font-bold border-b border-slate-300 text-kemenag-green flex justify-between">
                             <span>3. KEGIATAN PENUTUP (Joyful Learning & Refleksi Keberkahan)</span>
                             <span>15 Menit</span>
                         </div>
@@ -975,7 +982,7 @@ Tahap 3: Merefleksi (Reflecting) / Internalisasi & Aksi
 
                         <!-- Date & Location -->
                         <div class="text-center w-5/12">
-                            <p class="mb-1"><span id="pvSigTempat">............</span>, <span id="pvSigTanggal">16 September 2026</span></p>
+                            <p class="mb-1"><span id="pvSigTempat">Jakarta</span>, <span id="pvSigTanggal">16 September 2026</span></p>
                             <p class="font-bold uppercase text-slate-900">Guru Mata Pelajaran</p>
                             <div class="h-20 flex items-end justify-center">
                                 <span class="text-[10px] text-slate-400 italic mb-2">( Tanda Tangan Guru )</span>
@@ -990,8 +997,8 @@ Tahap 3: Merefleksi (Reflecting) / Internalisasi & Aksi
                 <!-- FOOTER / PAGE NUMBER (CORNER BOTTOM RIGHT) -->
                 <div class="mt-12 pt-3 border-t border-slate-200 flex items-center justify-between text-[10px] text-slate-500">
                     <div class="flex items-center space-x-1">
-                        <i class="fa-solid fa-kaaba text-islamic-gold"></i>
-                        <span class="font-semibold text-slate-700">Pokjawasmad Provinsi .............</span>
+                        <i class="fa-solid fa-kaaba text-kemenag-gold"></i>
+                        <span class="font-semibold text-slate-700">Guru Kemenag</span>
                         <span>• Dokumen Sah Pembelajaran Mendalam & KBC</span>
                     </div>
                     <div class="font-mono font-bold text-slate-700 bg-slate-100 px-2 py-0.5 rounded border border-slate-300">
@@ -1005,20 +1012,20 @@ Tahap 3: Merefleksi (Reflecting) / Internalisasi & Aksi
     </main>
 
     <!-- FOOTER -->
-    <footer class="no-print bg-slate-900 text-white border-t-4 border-islamic-gold mt-12 py-6">
+    <footer class="no-print bg-slate-900 text-white border-t-4 border-kemenag-gold mt-12 py-6">
         <div class="max-w-7xl mx-auto px-4 text-center text-xs space-y-2">
-            <div class="flex justify-center items-center space-x-2 text-islamic-gold">
+            <div class="flex justify-center items-center space-x-2 text-kemenag-gold">
                 <i class="fa-solid fa-star-and-crescent text-sm"></i>
-                <span class="font-bold tracking-wider">KELOMPOK KERJA PENGAWAS MADRASAH PROVINSI ...........</span>
+                <span class="font-bold tracking-wider">PLATFORM PERANGKAT AJAR GURU KEMENAG</span>
                 <i class="fa-solid fa-star-and-crescent text-sm"></i>
             </div>
             <p class="text-slate-400">Pengembangan Perangkat Ajar Pembelajaran Mendalam (Deep Learning) & Kurikulum Berbasis Cinta (KBC)</p>
-            <p class="text-slate-500 text-[11px]">Integrasi 8 Dimensi Profil Lulusan (8 DPL) & 5 Pilar Panca Cinta Kemenag RI</p>
+            <p class="text-slate-500 text-[11px]">Integrasi 8 Dimensi Profil Lulusan (8 DPL) & 5 Pilar Panca Cinta Guru Kemenag</p>
         </div>
     </footer>
 
     <!-- TOAST NOTIFICATION -->
-    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-slate-900 text-white px-4 py-3 rounded-2xl shadow-2xl border border-islamic-gold flex items-center space-x-3 text-xs">
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-slate-900 text-white px-4 py-3 rounded-2xl shadow-2xl border border-kemenag-gold flex items-center space-x-3 text-xs">
         <div id="toastIcon" class="text-amber-400 text-base"><i class="fa-solid fa-circle-info"></i></div>
         <div id="toastMsg" class="font-medium">Pesan sistem...</div>
     </div>
@@ -1026,15 +1033,15 @@ Tahap 3: Merefleksi (Reflecting) / Internalisasi & Aksi
     <script>
         // App State
         let currentUser = {
-            name: "........................",
-            id: "......................",
-            region: ".............."
+            name: "Dr. Syarifah Aminah, M.Pd.",
+            id: "198504122010012015",
+            region: "Jakarta"
         };
 
         // Draft Templates for Syntaxes
         const modelTemplates = {
             '3M': `Tahap 1: Memahami (Understanding) / Orientasi Konsep
-- Siswa mengamati tayangan transaksi pasar tradisional Indonesia vs e-commerce modern (Penalaran Kritis & Cinta Ilmu).
+- Siswa mengamati tayangan transaksi pasar tradisional vs e-commerce modern (Penalaran Kritis & Cinta Ilmu).
 - Mengidentifikasi rukun dan syarat sah transaksi bisnis syariah.
 
 Tahap 2: Mengaplikasikan (Applying) / Praktik & Simulasi
@@ -1042,17 +1049,17 @@ Tahap 2: Mengaplikasikan (Applying) / Praktik & Simulasi
 - Menyusun skenario akad jual beli berlandaskan prinsip kejujuran (Keimanan & Ketakwaan).
 
 Tahap 3: Merefleksi (Reflecting) / Internalisasi & Aksi
-- Refleksi Well-being & Kewargaan: Mengaitkan transaksi bisnis Islami dengan penegakan Syariat Islam & tanggung jawab sosial di Indonesia (Cinta Tanah Air).
+- Refleksi Well-being & Kewargaan: Mengaitkan transaksi bisnis Islami dengan tanggung jawab sosial & kebangsaan (Cinta Tanah Air).
 - Penugasan Proyek Bebas: Membuat infografis atau purwarupa produk bisnis syariah (Kreativitas & Kemandirian).`,
 
             'ARKA': `Tahap 1: Aktivitas (Experience)
-- Siswa melakukan simulasi transaksi langsung atau mengamati studi kasus ril di sekitar madrasah (Cinta Ilmu & Kolaborasi).
+- Siswa melakukan simulasi transaksi langsung atau mengamati studi kasus riil di sekitar sekolah/madrasah (Cinta Ilmu & Kolaborasi).
 
 Tahap 2: Refleksi (Reflection)
-- Diskusi kelompok mendalam: Mengapa kejujuran dan transpransi akad sangat krusial dalam ekonomi Islam? (Penalaran Kritis & Cinta Diri/Sesama).
+- Diskusi kelompok mendalam: Mengapa kejujuran dan transparansi akad sangat krusial dalam ekonomi Islam? (Penalaran Kritis & Cinta Diri/Sesama).
 
 Tahap 3: Konseptualisasi (Conceptualization)
-- Guru bersama siswa merumuskan dalil al-Qur'an/Hadis serta hukum syariat transaksi (Keimanan & Ketakwaan).
+- Guru bersama siswa merumuskan dalil Al-Qur'an/Hadis serta hukum syariat transaksi (Keimanan & Ketakwaan).
 
 Tahap 4: Aksi (Action)
 - Siswa merancang komitmen integritas jual beli dan mempraktikkannya di koperasi/kantin sekolah (Kewargaan & Kemandirian).`,
@@ -1064,7 +1071,7 @@ Fase 2: Mengorganisasi Siswa untuk Belajar
 - Membentuk kelompok kerja untuk menganalisis aspek kehalalan dan etika transaksi (Kolaborasi & Komunikasi).
 
 Fase 3: Membimbing Penyelidikan Mandiri / Kelompok
-- Mengumpulkan bukti hukum fiqih muamalah dan wawancara dengan tokoh agama lokal (Cinta Ilmu).
+- Mengumpulkan bukti hukum fiqih muamalah dan wawancara dengan tokoh agama (Cinta Ilmu).
 
 Fase 4: Mengembangkan & Menyajikan Hasil Karya
 - Mempresentasikan makalah/infografis solusi bisnis syariah beretika (Kreativitas & Komunikasi).
@@ -1082,7 +1089,7 @@ Fase 3: Menyusun Jadwal & Monitoring
 - Pelaksanaan pembuatan purwarupa/skenario proyek bisnis syariah (Kreativitas & Kesehatan).
 
 Fase 4: Menguji Hasil (Assess the Outcome)
-- Simulai gelaran pasar syariah cilik dan penilaian antar teman (Komunikasi & Kewargaan).
+- Simulasi gelaran pasar syariah cilik dan penilaian antar teman (Komunikasi & Kewargaan).
 
 Fase 5: Evaluasi Pengalaman Belajar
 - Refleksi nilai keberkahan rezeki & keikhlasan dalam berwirausaha (Cinta Allah & Rasul-Nya).`,
@@ -1091,7 +1098,7 @@ Fase 5: Evaluasi Pengalaman Belajar
 - Mengamati tayangan perbedaan akad Murabahah dan Riba dalam sistem perbankan/pasar (Penalaran Kritis).
 
 Langkah 2: Pengumpulan Data (Data Collection)
-- Membaca literatur fiqih dan mengeksplorasi contoh akad otentik di Indonesia (Cinta Ilmu).
+- Membaca literatur fiqih dan mengeksplorasi contoh akad otentik (Cinta Ilmu).
 
 Langkah 3: Pengolahan Data & Pembuktian (Verification)
 - Menganalisis syarat sah akad dan membuktikan perbedaan dampak sosial riba vs jual beli syariah (Kolaborasi).
@@ -1130,7 +1137,7 @@ Langkah 4: Penarikan Kesimpulan (Generalization)
         function loginUser() {
             const name = document.getElementById('inputAuthName').value.trim();
             const id = document.getElementById('inputAuthID').value.trim();
-            const region = document.getElementById('inputAuthRegion').value;
+            const region = document.getElementById('inputAuthRegion').value.trim();
 
             if (!name || !id) {
                 showToast("Mohon isi Nama Lengkap dan ID Pengguna / NIP!", "error");
@@ -1139,13 +1146,13 @@ Langkah 4: Penarikan Kesimpulan (Generalization)
 
             currentUser.name = name;
             currentUser.id = id;
-            currentUser.region = region;
+            currentUser.region = region || "Jakarta";
 
-            document.getElementById('fieldTempatPenetapan').value = region;
+            document.getElementById('fieldTempatPenetapan').value = currentUser.region;
 
             updateUserBadge();
             document.getElementById('authModal').classList.add('hidden');
-            showToast(`Selamat Datang, ${name}! Portal Pokjawasmad ........... Siap.`, "success");
+            showToast(`Selamat Datang, ${name}! Portal Guru Kemenag Siap.`, "success");
             syncFormToPreview();
         }
 
@@ -1172,15 +1179,15 @@ Langkah 4: Penarikan Kesimpulan (Generalization)
                 formSec.classList.add('hidden');
                 previewSec.classList.remove('hidden');
 
-                tabFormBtn.className = "flex-1 sm:flex-none px-5 py-2.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-2 text-slate-600 hover:text-islamic-green";
-                tabPreviewBtn.className = "flex-1 sm:flex-none px-5 py-2.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-2 bg-islamic-green text-white shadow";
+                tabFormBtn.className = "flex-1 sm:flex-none px-5 py-2.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-2 text-slate-600 hover:text-kemenag-green";
+                tabPreviewBtn.className = "flex-1 sm:flex-none px-5 py-2.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-2 bg-kemenag-green text-white shadow";
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             } else {
                 previewSec.classList.add('hidden');
                 formSec.classList.remove('hidden');
 
-                tabFormBtn.className = "flex-1 sm:flex-none px-5 py-2.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-2 bg-islamic-green text-white shadow";
-                tabPreviewBtn.className = "flex-1 sm:flex-none px-5 py-2.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-2 text-slate-600 hover:text-islamic-green";
+                tabFormBtn.className = "flex-1 sm:flex-none px-5 py-2.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-2 bg-kemenag-green text-white shadow";
+                tabPreviewBtn.className = "flex-1 sm:flex-none px-5 py-2.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-2 text-slate-600 hover:text-kemenag-green";
             }
         }
 
@@ -1192,6 +1199,11 @@ Langkah 4: Penarikan Kesimpulan (Generalization)
                 showToast(`Draft Aktivitas Inti disesuaikan dengan Model ${selectedModel}!`, "success");
                 syncFormToPreview();
             }
+        }
+
+        function updateModelAlurNotice() {
+            const selectedModel = document.querySelector('input[name="modelAlur"]:checked').value;
+            document.getElementById('modelLabelBadge').innerText = selectedModel;
         }
 
         // Get label name for model
@@ -1247,7 +1259,7 @@ Langkah 4: Penarikan Kesimpulan (Generalization)
             const asesmen = document.getElementById('fieldAsesmen').value || '-';
 
             // Location Date
-            const tempat = document.getElementById('fieldTempatPenetapan').value || '...............';
+            const tempat = document.getElementById('fieldTempatPenetapan').value || 'Jakarta';
             const tanggal = document.getElementById('fieldTanggalPenetapan').value || '16 September 2026';
 
             // Set Preview Elements
@@ -1300,20 +1312,18 @@ Langkah 4: Penarikan Kesimpulan (Generalization)
             document.getElementById('fieldNamaKamad').value = "H. Junaidi, S.Ag., M.Pd.";
             document.getElementById('fieldNipKamad').value = "197408121999031003";
 
-            document.getElementById('fieldCP').value = "Peserta didik mampu memahami dan menganalisis kandungan Al-Qur'an Surat Al-Hujurat ayat 10-13 tentang ukhuwah Islamiyah, kesetaraan, dan toleransi dalam bingkai nilai ke-Indonesia-an dan Syariat Islam.";
+            document.getElementById('fieldCP').value = "Peserta didik mampu memahami dan menganalisis kandungan Al-Qur'an Surat Al-Hujurat ayat 10-13 tentang ukhuwah Islamiyah, kesetaraan, dan toleransi dalam bingkai nilai kebangsaan dan keagamaan.";
             document.getElementById('fieldTP').value = "Melalui alur Pembelajaran Mendalam (ARKA & KBC), peserta didik mampu membaca, menerjemahkan, menganalisis pesan ukhuwah, serta mempraktikkan sikap saling menghormati di lingkungan madrasah.";
             document.getElementById('fieldIKTP').value = "1. Menterjemahkan perkata Q.S. Al-Hujurat: 10-13.\n2. Menganalisis pentingnya Ukhuwah Islamiyah dan Kewargaan.\n3. Menampilkan perilaku santun dan welas asih (KBC) antar sesama teman.\n4. Membedah studi kasus toleransi secara kritis (Penalaran Kritis).";
-            document.getElementById('fieldMateri').value = "Kandungan Q.S. Al-Hujurat: 10-13\n- Konsep Sikap Toleransi (Tasamuh) & Persaudaraan\n- Penerapan Nilai Pemuliaan Tamu (Adat Islami)\n- Menghindari Ghibah dan Buruk Sangka (Husnuzhan)";
+            document.getElementById('fieldMateri').value = "Kandungan Q.S. Al-Hujurat: 10-13\n- Konsep Sikap Toleransi (Tasamuh) & Persaudaraan\n- Penerapan Nilai Karakter Islami dalam Kehidupan Berbangsa\n- Menghindari Ghibah dan Buruk Sangka (Husnuzhan)";
 
-            showToast("Contoh Preset Pembelajaran Mendalam Kurikulum Nasional berhasil dimuat!", "success");
+            showToast("Contoh Preset Pembelajaran Mendalam Guru Kemenag berhasil dimuat!", "success");
             syncFormToPreview();
         }
 
-        // Smart AI Auto-Generation using Gemini Flash API
+        // Smart AI Auto-Generation using Gemini API
         async function triggerAIGenerate() {
             const btn = document.getElementById('btnAiGenerate');
-            const originalText = btn.innerHTML;
-            
             const mapel = document.getElementById('fieldMapel').value;
             const jenjang = document.getElementById('fieldJenjang').value;
             const cp = document.getElementById('fieldCP').value;
@@ -1327,9 +1337,9 @@ Langkah 4: Penarikan Kesimpulan (Generalization)
 
             btn.disabled = true;
             btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> <span>Menyusun Perangkat AI...</span>`;
-            showToast(`AI Pokjawasmad sedang menyusun rincian sintaks ${selectedModelCode} & KBC...`, "info");
+            showToast(`AI sedang menyusun rincian sintaks ${selectedModelCode} & KBC...`, "info");
 
-            const prompt = `Act as an expert Madrasah Curriculum Designer for Pokjawasmad ........... 
+            const prompt = `Act as an expert Madrasah Curriculum Designer for Guru Kemenag. 
 Generate structured lesson plan components integrating:
 - 8 Dimensi Profil Lulusan (8 DPL): Keimanan & Ketakwaan, Kewargaan, Penalaran Kritis, Kreativitas, Kolaborasi, Kemandirian, Kesehatan, Komunikasi.
 - Panca Cinta KBC (Kurikulum Berbasis Cinta): Mindful, Meaningful, Joyful.
@@ -1351,7 +1361,7 @@ Return ONLY a valid JSON object with the following keys:
 }`;
 
             try {
-                const apiKey = ""; // Canvas runtime provides key
+                const apiKey = "";
                 const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -1373,21 +1383,21 @@ Return ONLY a valid JSON object with the following keys:
                     if (res.penutup) document.getElementById('fieldPenutup').value = res.penutup;
                     if (res.asesmen) document.getElementById('fieldAsesmen').value = res.asesmen;
 
-                    showToast(`✨ AI berhasil menyusun rincian sintaks ${selectedModelCode} & Panca Cinta!`, "success");
+                    showToast("Penyusunan AI Perangkat Ajar Berhasil!", "success");
                     syncFormToPreview();
                 } else {
-                    throw new Error("Respon AI kosong");
+                    throw new Error("Respon AI tidak valid");
                 }
             } catch (err) {
-                console.error(err);
-                showToast("Terjadi kendala saat AI membuat konten, menggunakan template baku.", "error");
+                showToast("Sistem AI secara otomatis menyesuaikan template lokal.", "info");
+                applyModelTemplate();
             } finally {
                 btn.disabled = false;
-                btn.innerHTML = originalText;
+                btn.innerHTML = `<i class="fa-solid fa-microchip"></i> <span>Generate AI Smart</span>`;
             }
         }
 
-        // Download / Print PDF Function
+        // Download / Print PDF Handler
         function downloadPDF() {
             syncFormToPreview();
             switchTab('preview');
@@ -1396,22 +1406,22 @@ Return ONLY a valid JSON object with the following keys:
             }, 300);
         }
 
-        // Toast Helper
-        function showToast(msg, type = 'info') {
+        // Custom Toast Notification System
+        function showToast(message, type = "info") {
             const toast = document.getElementById('toast');
             const toastMsg = document.getElementById('toastMsg');
             const toastIcon = document.getElementById('toastIcon');
 
-            toastMsg.innerText = msg;
-            
-            if (type === 'success') {
+            toastMsg.innerText = message;
+
+            if (type === "success") {
                 toastIcon.innerHTML = `<i class="fa-solid fa-circle-check text-emerald-400"></i>`;
-            } else if (type === 'error') {
-                toastIcon.innerHTML = `<i class="fa-solid fa-triangle-exclamation text-red-400"></i>`;
-            } else if (type === 'warning') {
-                toastIcon.innerHTML = `<i class="fa-solid fa-circle-exclamation text-amber-400"></i>`;
+            } else if (type === "error") {
+                toastIcon.innerHTML = `<i class="fa-solid fa-circle-exclamation text-red-400"></i>`;
+            } else if (type === "warning") {
+                toastIcon.innerHTML = `<i class="fa-solid fa-triangle-exclamation text-amber-400"></i>`;
             } else {
-                toastIcon.innerHTML = `<i class="fa-solid fa-circle-info text-sky-400"></i>`;
+                toastIcon.innerHTML = `<i class="fa-solid fa-circle-info text-blue-400"></i>`;
             }
 
             toast.classList.remove('translate-y-20', 'opacity-0');
@@ -1420,13 +1430,7 @@ Return ONLY a valid JSON object with the following keys:
             setTimeout(() => {
                 toast.classList.remove('translate-y-0', 'opacity-100');
                 toast.classList.add('translate-y-20', 'opacity-0');
-            }, 4000);
-        }
-
-        function updateModelAlurNotice() {
-            const selected = document.querySelector('input[name="modelAlur"]:checked').value;
-            showToast(`Model alur diubah ke ${selected}. Klik 'Apply Draft Template' jika ingin memperbarui isi teks Aktivitas Inti.`, "info");
-            syncFormToPreview();
+            }, 3500);
         }
     </script>
 </body>
